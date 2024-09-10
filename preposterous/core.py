@@ -58,12 +58,12 @@ def get_timesteps(h5file, function_name):
 # Initialize MPI communicator
 comm = MPI.COMM_WORLD
 
-# Define the path to the xdmf file
-file_path = os.path.join(os.path.dirname(__file__), 'data/1d-bar')
-xdmf_file_path = file_path + '.xdmf'
-h5_file_path = file_path + '.h5'
 
 if __name__ == "__main__":
+    # Define the path to the xdmf file
+    file_path = os.path.join(os.path.dirname(__file__), 'data/1d-bar')
+    xdmf_file_path = file_path + '.xdmf'
+    h5_file_path = file_path + '.h5'
 
     # Load the mesh and function spaces
     with XDMFFile(comm, xdmf_file_path, "r") as xdmf_file:
