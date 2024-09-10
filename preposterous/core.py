@@ -8,7 +8,7 @@ import os
 import h5py
 
 
-def read_timestep_data(h5file, function, function_name, timestep):
+def read_timestep_data(h5_file_path, function, function_name, timestep):
     """
     Read data for a specific timestep from the HDF5 file and update the function vector.
 
